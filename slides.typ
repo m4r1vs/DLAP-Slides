@@ -45,3 +45,58 @@ def a_function(paramter):
 
 #pagebreak()
 #set page(header: template.page-header("Convolutional Layers"))
+- Architecture
+#align(center, image("assets/CNNArchitecture.png"))
+
+#pagebreak()
+Convolutional layer
+- Filter size F: Dimensions of the filter
+- Stride S: The number of pixels by which the input window will move after each operation
+
+#pagebreak()
+Zero padding:
+- adding P zeroes to each side of the boundaries input
+#align(center, image("assets/ZeroPadding.png"))
+
+
+#pagebreak()
+- Convolution Operation
+#align(center, image("assets/CONVformal.png", height: 50%))
+- Sum of all element-wise multiplications
+
+#pagebreak()
+- Example: Filter size 2x2, Stride 1, valid zero padding
+#align(center, image("assets/ExampleCONV1.png", height: 50%))
+$
+1*1 + 0*1 + 0*2 + 1*0 = 1 + 0 + 0 + 0 = 1
+$
+
+#pagebreak()
+- Example: Filter size 2x2, Stride 1, valid zero padding
+#align(center, image("assets/ExampleCONV2.png", height: 50%))
+$
+0*1 + 2*1 + 1*2 + 2*0 = 0 + 2 + 2 + 0 = 4
+$
+
+#pagebreak()
+- Example: Filter size 2x2, Stride 1, valid zero padding
+#align(center, image("assets/ExampleCONV3.png", height: 50%))
+$
+0*1 + 1*1 + 0*2 + 0*0 = 0 + 1 + 0 + 0 = 1
+$
+
+#pagebreak()
+- Example: Filter size 2x2, Stride 1, valid zero padding
+#align(center, image("assets/ExampleCONV4.png", height: 50%))
+$
+1*1 + 2*1 + 1*2 + 0*0 = 1 + 2 + 2 + 0 = 5
+$
+
+#pagebreak()
+- Works with different dimensionalities
+#align(center, image("assets/ConvRGB.png", height: 70%))
+
+
+
+#pagebreak()
+
