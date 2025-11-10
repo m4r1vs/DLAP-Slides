@@ -96,7 +96,36 @@ $
 - Works with different dimensionalities
 #align(center, image("assets/ConvRGB.png", height: 70%))
 
-
+#pagebreak()
+#set page(header: template.page-header("Max Pooling"))
+- Operation done after convolution and activation
+- Maximum output within rectangular neighborhood
+ - Parameters: Size of window and stride
+- Introduces invariance to small translations
+#align(left, image("assets/MaxPooling2x2Stride2.png"))
 
 #pagebreak()
 
+#pagebreak()
+#set page(header: template.page-header("VGG-16"))
+- CNN architecture designed at Oxford University in 2015
+#align(center, image("assets/VGG16_arch(1).png", height: 70%))
+
+#pagebreak()
+#align(center, image("assets/VGG16_arch(2).png", height: 60%))
+- Filter 3x3, stride 1
+- Max Pooling 2x2, stride 2
+- "Same" Zero-Padding -> preserved size
+
+#pagebreak()
+TODO
+
+#pagebreak()
+#set page(header: template.page-header("Residual Network"))
+#align(center, image("assets/ResNetVSPlainNtw.png", height: 120%))
+
+#pagebreak()
+TODO
+
+#pagebreak()
+#set page(header: template.page-header("Summary"))
