@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/typst/hayagriva/3bab47a7dd3cc0d23d19740e9ff697c9598b3ac1/hayagriva.schema.json
+CNNCheatSheet:
+  type: web
+  title: "Convolutional Neural Networks Cheatsheet"
+  author:
+    - Afshine Amidi
+    - Shervine Amidi
+  publisher: Stanford University
+  url: https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks
+  note: "Comprehensive reference for CNN architectures, layers, and techniques."
+
+CNNsChapter9:
+  type: book
+  title: "Deep Learning"
+  author:
+    - Ian Goodfellow
+    - Yoshua Bengio
+    - Aaron Courville
+  publisher: MIT Press
+  note: "http://www.deeplearningbook.org"
+  year: 2016
+
+DeepResidualLearning:
+  type: misc
+  title: "Deep Residual Learning for Image Recognition"
+  author:
+    - Kaiming He
+    - Xiangyu Zhang
+    - Shaoqing Ren
+    - Jian Sun
+  year: 2015
+  eprint: 1512.03385
+  archivePrefix: arXiv
+  primaryClass: cs.CV
+  url: https://arxiv.org/abs/1512.03385
+
+VisualizingCNNs:
+  type: article
+  title: "Visualizing and Understanding Convolutional Networks"
+  author:
+    - Matthew D. Zeiler
+    - Rob Fergus
+  year: 2013
+  eprint: 1311.2901
+  url: https://arxiv.org/abs/1311.2901
