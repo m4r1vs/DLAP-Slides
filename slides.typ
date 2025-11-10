@@ -35,3 +35,13 @@ def a_function(paramter):
 ```
 - Showing a graph:
 #align(center, image("assets/Typical_cnn.png", height: 35%))
+
+#pagebreak()
+#set page(header: template.page-header("Outline"))
+- Convolutional Layers
+- Max Pooling
+- VGG16
+- ResNet (Residuals, Skip Connections)
+
+#pagebreak()
+#set page(header: template.page-header("Convolutional Layers"))
