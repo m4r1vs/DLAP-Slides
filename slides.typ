@@ -20,7 +20,7 @@
 - Trying to do some sums $sum_2^4 = 4$
 - This also works as a separate equation in math mode:jfe
 $
-sum_2^4 = 4
+  sum_2^4 = 4
 $
 - and now we add another bullet point
 
@@ -68,28 +68,28 @@ Zero padding:
 - Example: Filter size 2x2, Stride 1, valid zero padding
 #align(center, image("assets/ExampleCONV1.png", height: 50%))
 $
-1*1 + 0*1 + 0*2 + 1*0 = 1 + 0 + 0 + 0 = 1
+  1 dot 1 + 0 dot 1 + 0 dot 2 + 1 dot 0 = 1 + 0 + 0 + 0 = 1
 $
 
 #pagebreak()
 - Example: Filter size 2x2, Stride 1, valid zero padding
 #align(center, image("assets/ExampleCONV2.png", height: 50%))
 $
-0*1 + 2*1 + 1*2 + 2*0 = 0 + 2 + 2 + 0 = 4
+  0 dot 1 + 2 dot 1 + 1 dot 2 + 2 dot 0 = 0 + 2 + 2 + 0 = 4
 $
 
 #pagebreak()
 - Example: Filter size 2x2, Stride 1, valid zero padding
 #align(center, image("assets/ExampleCONV3.png", height: 50%))
 $
-0*1 + 1*1 + 0*2 + 0*0 = 0 + 1 + 0 + 0 = 1
+  0 dot 1 + 1 dot 1 + 0 dot 2 + 0 dot 0 = 0 + 1 + 0 + 0 = 1
 $
 
 #pagebreak()
 - Example: Filter size 2x2, Stride 1, valid zero padding
 #align(center, image("assets/ExampleCONV4.png", height: 50%))
 $
-1*1 + 2*1 + 1*2 + 0*0 = 1 + 2 + 2 + 0 = 5
+  1 dot 1 + 2 dot 1 + 1 dot 2 + 0 dot 0 = 1 + 2 + 2 + 0 = 5
 $
 
 #pagebreak()
@@ -100,7 +100,7 @@ $
 #set page(header: template.page-header("Max Pooling"))
 - Operation done after convolution and activation
 - Maximum output within rectangular neighborhood
- - Parameters: Size of window and stride
+  - Parameters: Size of window and stride
 - Introduces invariance to small translations
 #align(left, image("assets/MaxPooling2x2Stride2.png"))
 
