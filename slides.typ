@@ -118,7 +118,15 @@ $
 - "Same" Zero-Padding -> preserved size
 
 #pagebreak()
-TODO
+Advantages:
+- Simple, easy to understand
+- Easy to implement
+- Good accuracy
+
+Disadvantages:
+- High memory consumption
+- Slow
+- Prone to overfitting
 
 #pagebreak()
 #set page(header: template.page-header("Residual Network"))
