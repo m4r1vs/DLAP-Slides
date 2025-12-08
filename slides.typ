@@ -1,4 +1,4 @@
-@CNNCheatSheet#import "template.typ" as template
+#import "template.typ" as template
 
 #show: body => template.title-page(
   authors: "Group Geschke — Louis Tank, Kevin Karle and Marius Niveri",
