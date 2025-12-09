@@ -14,6 +14,8 @@
   body,
 )
 
+#show figure.caption: set text(0.65em)
+
 #set page(header: template.page-header("Einführung"))
 
 - TODO: this presentation while we cite a source @DeepResidualLearning
@@ -108,14 +110,14 @@ $
 
 #pagebreak()
 #set page(header: template.page-header("VGG-16"))
-- CNN architecture designed at Oxford University in 2015
-#align(center, image("assets/VGG16_arch(1).png", height: 70%))
+- designed at Oxford University in 2014
+#figure(image("assets/VGG16_arch(1).png", height: 70%), caption: [Architecture of VGG-16 @VarshneyVGG16])
 
 #pagebreak()
-#align(center, image("assets/VGG16_arch(2).png", height: 60%))
-- Filter 3x3, stride 1
+#figure(image("assets/VGG16_arch(2).png", height: 60%), caption: [Architecture of VGG-16 @VarshneyVGG16])
+- Filter 3x3, stride 1, padding "Same"
 - Max Pooling 2x2, stride 2
-- "Same" Zero-Padding -> preserved size
+
 
 #pagebreak()
 Advantages:

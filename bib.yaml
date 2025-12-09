@@ -69,3 +69,9 @@ ILSVRC2014:
   author:
   publisher: ImageNET
   url: https://www.image-net.org/challenges/LSVRC/2014/results
+
+VarshneyVGG16:
+  type: article
+  author: Paras Varshney
+  title: "VGGNet-16 Architecture: A Complete Guide"
+  url: https://www.kaggle.com/code/blurredmachine/vggnet-16-architecture-a-complete-guide/notebook?scriptVersionId=39674893
