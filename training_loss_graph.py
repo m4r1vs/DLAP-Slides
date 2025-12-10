@@ -27,7 +27,7 @@ ax.plot(x, y_deep, color="#1f77b4", linewidth=4.0, label="Deep Network")
 # 4. Add Text Labels (Annotation style)
 # Using ax.text for clean placement near the lines
 ax.text(7.5, 0.42, "shallow\nnetwork", color="#d62728", fontsize=16, fontweight="bold")
-ax.text(8.2, 0.15, "deep\nnetwork", color="#1f77b4", fontsize=16, fontweight="bold")
+ax.text(8.2, 0.05, "deep\nnetwork", color="#1f77b4", fontsize=16, fontweight="bold")
 
 # 5. Customize Axes to look like the diagram (L-shape with arrows)
 ax.set_xticks([])
