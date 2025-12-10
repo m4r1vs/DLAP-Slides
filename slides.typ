@@ -16,29 +16,6 @@
 
 #show figure.caption: set text(0.65em)
 
-#set page(header: template.page-header("Einführung"))
-
-- TODO: this presentation while we cite a source @DeepResidualLearning
-- Trying to do some sums $sum_2^4 = 4$
-- This also works as a separate equation in math mode:jfe
-$
-  sum_2^4 = 4
-$
-- and now we add another bullet point
-
-#pagebreak()
-#set page(header: template.page-header("Diving Deeper"))
-- This is our next slide on the next page where we show python code:
-```python
-def a_function(paramter):
-  print(parameter)
-  # this seems to work even with code highlighting
-  print("nice")
-```
-- Showing a graph:
-#align(center, image("assets/Typical_cnn.png", height: 35%))
-
-#pagebreak()
 #set page(header: template.page-header("Outline"))
 - Convolutional Layers
 - Max Pooling
@@ -111,10 +88,16 @@ $
 #pagebreak()
 #set page(header: template.page-header("VGG-16"))
 - designed at Oxford University in 2014
-#figure(image("assets/VGG16_arch(1).png", height: 70%), caption: [Architecture of VGG-16 @VarshneyVGG16])
+#figure(
+  image("assets/VGG16_arch(1).png", height: 70%),
+  caption: [Architecture of VGG-16 @VarshneyVGG16],
+)
 
 #pagebreak()
-#figure(image("assets/VGG16_arch(2).png", height: 60%), caption: [Architecture of VGG-16 @VarshneyVGG16])
+#figure(
+  image("assets/VGG16_arch(2).png", height: 60%),
+  caption: [Architecture of VGG-16 @VarshneyVGG16],
+)
 - Filter 3x3, stride 1, padding "Same"
 - Max Pooling 2x2, stride 2
 
@@ -131,8 +114,22 @@ Disadvantages:
 - Prone to overfitting
 
 #pagebreak()
-#set page(header: template.page-header("Residual Network"))
-#align(center, image("assets/ResNetVSPlainNtw.png", height: 120%))
+#set page(header: template.page-header("Residual Networks"))
+
+- *Problem*: Training difficulty increases with depth of network
+  - aka. "Degredation Problem"
+#figure(
+  image("assets/training_loss_graph.svg", height: 60%),
+  caption: [Training difficulty increases],
+)
+
+#pagebreak()
+
+- Proposed *Solution*: _"Residual Block"_:
+#figure(
+  image("assets/resnet-block.jpg", height: 50%),
+  caption: [Partially Skipping layer(s) of network @DeepResidualLearning],
+)
 
 #pagebreak()
 TODO

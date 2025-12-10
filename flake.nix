@@ -31,6 +31,11 @@
               typst
               typstyle
               tinymist
+              (python3.withPackages
+                (ps: [
+                  ps.matplotlib
+                  ps.numpy
+                ]))
             ];
           }
     );
