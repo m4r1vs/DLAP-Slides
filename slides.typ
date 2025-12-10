@@ -136,7 +136,7 @@ Disadvantages:
 #pagebreak()
 #set page(header: template.page-header("Residual Networks: Introduction"))
 
-- Proposed Solution: _"Residual Block"_
+- 2015 Proposed Solution: _"Residual Block"_
   - Increase connection: *input* #sym.arrow.l.r *output*
 #figure(
   image("assets/resnet-block.jpg", height: 50%),
