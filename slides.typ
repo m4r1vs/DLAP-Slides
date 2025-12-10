@@ -125,10 +125,28 @@ Disadvantages:
 
 #pagebreak()
 
-- Proposed *Solution*: _"Residual Block"_:
+- Reason: Data gets "scrambled" a lot passing through the network.
+  - So does gradient
+#v(50pt)
+#figure(
+  image("assets/pre-resnet-example.svg", width: 100%),
+  caption: [Deep Neural Network without Residual Block],
+)
+
+#pagebreak()
+- Proposed Solution: _"Residual Block"_
+  - Increase connection: *input* #sym.arrow.l.r *output*
 #figure(
   image("assets/resnet-block.jpg", height: 50%),
   caption: [Partially Skipping layer(s) of network @DeepResidualLearning],
+)
+
+#pagebreak()
+
+#v(20pt)
+#figure(
+  image("assets/post-resnet-example.svg", width: 100%),
+  caption: [Deep Neural Network with Residual Block],
 )
 
 #pagebreak()
