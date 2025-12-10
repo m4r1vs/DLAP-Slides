@@ -120,7 +120,7 @@ Disadvantages:
   - aka. "Degredation Problem"
 #figure(
   image("assets/training_loss_graph.svg", height: 60%),
-  caption: [Training difficulty increases],
+  caption: [Training difficulty increases @ResNetYTvideoIntro],
 )
 
 #pagebreak()
@@ -134,6 +134,8 @@ Disadvantages:
 )
 
 #pagebreak()
+#set page(header: template.page-header("Residual Networks: Introduction"))
+
 - Proposed Solution: _"Residual Block"_
   - Increase connection: *input* #sym.arrow.l.r *output*
 #figure(
@@ -170,7 +172,7 @@ Disadvantages:
 
 #figure(
   image("assets/benchmark-comparison-resnet-vgg.jpg", width: 40%),
-  caption: [ImageNet Benchmark Results @DeepResidualLearning],
+  caption: [ImageNet Benchmark Results (Top-1 Error %) @DeepResidualLearning],
 )
 - $mono("18-plain")$ had better training accuracy than $mono("34-plain")$ confirming "Degredation Problem" \
   #sym.arrow.r.double This is not overfitting!
@@ -186,4 +188,30 @@ Disadvantages:
 - They don't solve overfitting \
   #sym.arrow.r.double Datasets still need to be large enough for network depth
 - Generic Building block easily integrated into other architectures \
-  #sym.arrow.r.double Combine with CNN, RNN, Transformers (ChatGPT), etc..
+  #sym.arrow.r.double Combine with CNN, RNN, Transformers, etc.. @AttentIsAllUNeed
+
+#pagebreak()
+#set page(header: template.page-header(
+  "Residual Networks: Pytorch 2-layer Example",
+))
+#set text(size: 18pt)
+```python
+
+class ResidualBlock(nn.Module):
+    def __init__(self, channels):
+        super().__init__()
+        self.conv1 = nn.Conv2d(channels, channels, kernel_size=3, padding=1)
+        self.bn1 = nn.BatchNorm2d(channels)
+        self.relu = nn.ReLU()
+        self.conv2 = nn.Conv2d(channels, channels, kernel_size=3, padding=1)
+        self.bn2 = nn.BatchNorm2d(channels)
+
+    def forward(self, input):
+        out = self.conv1(input)
+        out = self.bn1(out)
+        out = self.relu(out)
+        out = self.conv2(out)
+        out = self.bn2(out)
+        out += input              # output = F(input, W) + input
+        return self.relu(out)
+```

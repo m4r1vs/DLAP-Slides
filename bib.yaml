@@ -66,7 +66,6 @@ VGG16Overview:
 ILSVRC2014:
   type: web
   title: "Large Scale Visual Recognition Challenge 2014 (ILSVRC2014)"
-  author:
   publisher: ImageNET
   url: https://www.image-net.org/challenges/LSVRC/2014/results
 
@@ -75,3 +74,28 @@ VarshneyVGG16:
   author: Paras Varshney
   title: "VGGNet-16 Architecture: A Complete Guide"
   url: https://www.kaggle.com/code/blurredmachine/vggnet-16-architecture-a-complete-guide/notebook?scriptVersionId=39674893
+
+AttentIsAllUNeed:
+  type: article
+  title: "Attention Is All You Need"
+  author:
+    - Ashish Vaswani
+    - Noam Shazeer
+    - Niki Parmar
+    - Jakob Uszkoreit
+    - Llion Jones
+    - Aidan N. Gomez
+    - Lukasz Kaiser
+    - Illia Polosukhin
+  year: 2023
+  eprint: 1706.03762
+  archivePrefix: arXiv
+  primaryClass: cs.CL
+  url: https://arxiv.org/abs/1706.03762
+
+ResNetYTvideoIntro:
+  type: video
+  title: "Residual Networks and Skip Connections (DL 15)"
+  author: Professor Bryce
+  url: https://www.youtube.com/watch?v=Q1JCrG1bJ-A
+  year: 2022
