@@ -114,7 +114,7 @@ Disadvantages:
 - Prone to overfitting
 
 #pagebreak()
-#set page(header: template.page-header("Residual Networks"))
+#set page(header: template.page-header("Residual Networks: Motivation"))
 
 - *Problem*: Training difficulty increases with depth of network
   - aka. "Degredation Problem"
@@ -150,7 +150,40 @@ Disadvantages:
 )
 
 #pagebreak()
-TODO
+#set page(header: template.page-header("Residual Networks: Architectures"))
+#text("ResNet Benchmark Architectures", size: 34pt, weight: "bold")
+
+- 18-layer and 34-layer VGG-inspired "plain" networks
+  - aka. $mono("18-plain")$ and $mono("34-plain")$
+- Same networks but with residual blocks
+  - aka. $mono("18-ResNet")$ and $mono("34-ResNet")$
+- Tested i.a. with $mono("ImageNet")$ Dataset.
 
 #pagebreak()
-#set page(header: template.page-header("Summary"))
+
+#figure(
+  image("assets/resnet-architectures-with-plain.jpg", height: 100%),
+  caption: [Benchmark Architectures @DeepResidualLearning],
+)
+
+#pagebreak()
+
+#figure(
+  image("assets/benchmark-comparison-resnet-vgg.jpg", width: 40%),
+  caption: [ImageNet Benchmark Results @DeepResidualLearning],
+)
+- $mono("18-plain")$ had better training accuracy than $mono("34-plain")$ confirming "Degredation Problem" \
+  #sym.arrow.r.double This is not overfitting!
+- $mono("18-ResNet")$ performed similar to $mono("18-plain")$
+- $mono("34-ResNet")$ outperformed all other benchmark models \
+  #sym.arrow.r.double "Residual Blocks" solve degredation Problem
+
+#pagebreak()
+#set page(header: template.page-header("Residual Networks: Summary"))
+- Introduced "Identity Mapping" aka. "Residual Blocks"
+- Tackle the Degredation Problem \
+  #sym.arrow.r.double Allow deeper networks
+- They don't solve overfitting \
+  #sym.arrow.r.double Datasets still need to be large enough for network depth
+- Generic Building block easily integrated into other architectures \
+  #sym.arrow.r.double Combine with CNN, RNN, Transformers (ChatGPT), etc..

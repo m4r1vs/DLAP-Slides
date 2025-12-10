@@ -91,7 +91,7 @@
    * BIBLIOGRAPHY
    * */
 
-  set page(header: page-header("Sources"))
+  set page(header: page-header("References"))
   set text(font: "Public Sans", size: 16pt)
   bibliography("bib.yaml", full: true, title: none)
 }
