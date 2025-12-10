@@ -6,9 +6,9 @@
   subtitle: [
     Project "Deep Learning for Audio Processing"\
     by
-    #link("mailto: jakob.kienegger@uni-hamburg.de>")[Jakob Kienegger]
+    #link("mailto:jakob.kienegger@uni-hamburg.de")[Jakob Kienegger]
     and
-    #link("mailto: martin.jaelmby@uni-hamburg.de")[Martin Jälmby]\
+    #link("mailto:martin.jaelmby@uni-hamburg.de")[Martin Jälmby]\
   ],
   faculty: "https://www.inf.uni-hamburg.de/en/inst/ab/sp/home.html",
   body,
@@ -34,7 +34,7 @@ Convolutional layer
 
 #pagebreak()
 Zero padding:
-- adding P zeroes to each side of the boundaries input
+- Adding P zeroes to each side of the boundaries input
 #align(center, image("assets/ZeroPadding.png"))
 
 
@@ -117,7 +117,7 @@ Disadvantages:
 #set page(header: template.page-header("Residual Networks: Motivation"))
 
 - *Problem*: Training difficulty increases with depth of network
-  - aka. "Degredation Problem"
+  - aka. "Degradation Problem"
 #figure(
   image("assets/training_loss_graph.svg", height: 60%),
   caption: [Training difficulty increases @ResNetYTvideoIntro],
@@ -174,16 +174,16 @@ Disadvantages:
   image("assets/benchmark-comparison-resnet-vgg.jpg", width: 40%),
   caption: [ImageNet Benchmark Results (Top-1 Error %) @DeepResidualLearning],
 )
-- $mono("18-plain")$ had better training accuracy than $mono("34-plain")$ confirming "Degredation Problem" \
+- $mono("18-plain")$ had better training accuracy than $mono("34-plain")$ confirming "Degradation Problem" \
   #sym.arrow.r.double This is not overfitting!
 - $mono("18-ResNet")$ performed similar to $mono("18-plain")$
 - $mono("34-ResNet")$ outperformed all other benchmark models \
-  #sym.arrow.r.double "Residual Blocks" solve degredation Problem
+  #sym.arrow.r.double "Residual Blocks" solve degradation Problem
 
 #pagebreak()
 #set page(header: template.page-header("Residual Networks: Summary"))
 - Introduced "Identity Mapping" aka. "Residual Blocks"
-- Tackle the Degredation Problem \
+- Tackle the Degradation Problem \
   #sym.arrow.r.double Allow deeper networks
 - They don't solve overfitting \
   #sym.arrow.r.double Datasets still need to be large enough for network depth
