@@ -22,6 +22,12 @@
 - VGG16
 - ResNet (Residuals, Skip Connections)
 
+#align(bottom)[
+  #text(size: 16pt)[
+    Sourcecode incl. animation: #link("https://github.com/m4r1vs/DLAP-Slides")[github.com/m4r1vs/DLAP-Slides]
+  ]
+]
+
 #pagebreak()
 
 #text("What is a convolution?", size: 34pt, weight: "bold")
