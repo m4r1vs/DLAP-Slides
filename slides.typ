@@ -84,8 +84,6 @@ $
 #align(left, image("assets/MaxPooling2x2Stride2.png"))
 
 #pagebreak()
-
-#pagebreak()
 #set page(header: template.page-header("VGG-16"))
 - designed at Oxford University in 2014
 #figure(
@@ -155,7 +153,7 @@ Disadvantages:
 #set page(header: template.page-header("Residual Networks: Architectures"))
 #text("ResNet Benchmark Architectures", size: 34pt, weight: "bold")
 
-- 18-layer and 34-layer VGG-inspired "plain" networks
+- 18-layer and 34-layer VGG-like "plain" networks
   - aka. $mono("18-plain")$ and $mono("34-plain")$
 - Same networks but with residual blocks
   - aka. $mono("18-ResNet")$ and $mono("34-ResNet")$
