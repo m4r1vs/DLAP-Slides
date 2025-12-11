@@ -1,3 +1,6 @@
 .direnv/
+*/**/__pycache__
+.env/
 slides.pdf
 result
+*.egg-info/

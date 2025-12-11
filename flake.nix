@@ -31,12 +31,22 @@
               typst
               typstyle
               tinymist
-              (python3.withPackages
-                (ps: [
-                  ps.matplotlib
-                  ps.numpy
-                ]))
+              python3
+              cairo
+              pkg-config
             ];
+            shellHook = ''
+              set -o pipefail
+              if [ ! -d .env ]; then
+                python -m venv .env
+                source ./.env/bin/activate
+                pip install -U pip
+                pip install -e .
+                echo "Python virtual environment created and activated."
+              else
+                source ./.env/bin/activate
+              fi
+            '';
           }
     );
     packages = forAllSystems (
@@ -44,32 +54,38 @@
         pkgs = import nixpkgs {
           inherit system;
         };
-      in {
-        slides = pkgs.stdenv.mkDerivation {
-          name = "slides";
-          src = ./.;
-          buildInputs = [
-            pkgs.typst
-            pkgs.public-sans
-          ];
-          FONTCONFIG_FILE = pkgs.makeFontsConf {
-            fontDirectories = [
-              pkgs.public-sans
+      in
+        with pkgs; {
+          slides = stdenv.mkDerivation {
+            name = "slides";
+            src = ./.;
+            buildInputs = [
+              typst
+              public-sans
+              (python3.withPackages (ps: [
+                ps.matplotlib
+                ps.numpy
+              ]))
             ];
+            FONTCONFIG_FILE = makeFontsConf {
+              fontDirectories = [
+                public-sans
+              ];
+            };
+            buildPhase = ''
+              runHook preBuild
+              python training_loss_graph.py
+              typst compile ./slides.typ -f pdf
+              runHook postBuild
+            '';
+            installPhase = ''
+              runHook preInstall
+              mkdir -p $out
+              cp ./slides.pdf $out/slides.pdf
+              runHook postInstall
+            '';
           };
-          buildPhase = ''
-            runHook preBuild
-            typst compile ./slides.typ -f pdf
-            runHook postBuild
-          '';
-          installPhase = ''
-            runHook preInstall
-            mkdir -p $out
-            cp ./slides.pdf $out/slides.pdf
-            runHook postInstall
-          '';
-        };
-      }
+        }
     );
   };
 }

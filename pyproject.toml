@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DLAP-Slides-geschke"
+version = "2025.12.11"
+dependencies = [
+  "manimgl~=1.7.2",
+  "manimlib~=0.2.0",
+  "numpy~=2.2.6",
+  "matplotlib~=3.10.8",
+  "setuptools"
+]
+
+[tool.setuptools]
+package-dir = {"" = "animation"}
+packages = ["custom"]
+py-modules = ["manim_imports_ext", "supplements"]
