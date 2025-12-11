@@ -99,3 +99,9 @@ ResNetYTvideoIntro:
   author: Professor Bryce
   url: https://www.youtube.com/watch?v=Q1JCrG1bJ-A
   year: 2022
+
+PoolingLayerWiki:
+  type: web
+  title: "Pooling layer - Wikipedia"
+  url: https://en.wikipedia.org/wiki/Pooling_layer
+  note: "Overview of pooling layers in neural networks from Wikipedia."

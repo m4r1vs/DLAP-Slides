@@ -41,7 +41,12 @@
 #align(center, image("assets/CONVformal.png", width: 80%))
 
 #pagebreak()
-Convolutional layer
+
+#text("Example Animation", size: 34pt, weight: "bold")
+
+#pagebreak()
+#text("Convolution Layer", size: 34pt, weight: "bold")
+
 - Filter size F: Dimensions of the filter
 - Stride S: The number of pixels by which the input window will move after each operation
 
@@ -89,11 +94,13 @@ Zero padding:
 
 #pagebreak()
 #set page(header: template.page-header("Max Pooling"))
-- Operation done after convolution and activation
-- Maximum output within rectangular neighborhood
-  - Parameters: Size of window and stride
-- Introduces invariance to small translations
-#align(left, image("assets/MaxPooling2x2Stride2.png"))
+- Small spacial shifts in input break activations \
+  #sym.arrow.r.double Solution: Max Pooling
+- Done after convolution and activation
+#figure(
+  image("assets/max_pooling.png", width: 80%),
+  caption: [Max Pooling Visualization @PoolingLayerWiki],
+)
 
 #pagebreak()
 #set page(header: template.page-header("VGG-16"))
