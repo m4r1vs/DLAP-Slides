@@ -37,6 +37,7 @@
             ];
             shellHook = ''
               set -o pipefail
+              unset SOURCE_DATE_EPOCH # set by nix to 1 to allow reproducible builds over time. We don't want that (for datetime.now in typst)
               if [ ! -d .env ]; then
                 python -m venv .env
                 source ./.env/bin/activate
