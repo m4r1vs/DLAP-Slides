@@ -69,6 +69,12 @@ ILSVRC2014:
   publisher: ImageNET
   url: https://www.image-net.org/challenges/LSVRC/2014/results
 
+DCASE17:
+  type: web
+  title: "DCASE 2017 Challange Homepage"
+  publisher: "IEEE"
+  url: https://dcase.community/challenge2017/index
+
 VarshneyVGG16:
   type: article
   author: Paras Varshney
@@ -105,3 +111,20 @@ PoolingLayerWiki:
   title: "Pooling layer - Wikipedia"
   url: https://en.wikipedia.org/wiki/Pooling_layer
   note: "Overview of pooling layers in neural networks from Wikipedia."
+
+TorchAudioAugment:
+  type: web
+  title: "Audio Data Augmentation"
+  url: https://docs.pytorch.org/audio/stable/tutorials/audio_data_augmentation_tutorial.html
+  note: "torchaudio provides a variety of ways to augment audio data."
+
+Mun2017:
+  type: report
+  title: "Generative Adversarial Network Based Acoustic Scene Training Set Augmentation and Selection Using SVM Hyper-Plane"
+  author:
+    - Seongkyu Mun
+    - Sangwook Park
+    - David Han
+    - Hanseok Ko
+  organization: "DCASE2017 Challenge"
+  year: 2017
